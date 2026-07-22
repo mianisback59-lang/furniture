@@ -40,17 +40,19 @@
 
   nav ul {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     list-style: none;
   }
 
   .nav-btn {
+    display: inline-block;
     padding: 8px 18px;
     background-color: firebrick;
     color: white;
     border-radius: 20px;
     font-weight: 600;
     text-decoration: none;
+    text-align: center;
     transition: background-color 0.3s ease;
   }
 
@@ -221,15 +223,29 @@
       font-size: 24px;
     }
 
+    /* موبائل نیویگیشن مینو کی درستگی */
     nav ul {
       flex-direction: column;
       background: #fff;
       position: absolute;
       top: 70px;
-      right: 0;
-      width: 200px;
+      right: 15px;
+      width: 220px;
+      padding: 20px;
+      gap: 12px;
       display: none;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    nav ul li {
+      width: 100%;
+    }
+
+    /* تمام بٹنز کا سائز ایک جیسا (Equal Size) کرنا */
+    .nav-btn {
+      width: 100%;
+      padding: 10px 0;
     }
 
     nav ul.active {
@@ -501,7 +517,6 @@
     <nav id="navbar">
       <ul>
         <li><a href="#home" class="nav-btn">Home</a></li>
-        <li><a href="#gallery" class="nav-btn">Products</a></li>
         <li><a href="#gallery" class="nav-btn">Gallery</a></li>
         <li><a href="#about" class="nav-btn">About</a></li>
         <li><a href="#contact" class="nav-btn">Contact</a></li>
@@ -703,7 +718,6 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#gallery">Products</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
